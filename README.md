@@ -1,9 +1,8 @@
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/meanjs/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](https://travis-ci.org/meanjs/mean.svg?branch=master)](https://travis-ci.org/meanjs/mean)
+[![Build Status](https://travis-ci.org/jmreed0112358/mean.svg?branch=0.4.2-fixes)](https://travis-ci.org/jmreed0112358/mean)
 [![Dependencies Status](https://david-dm.org/meanjs/mean.svg)](https://david-dm.org/meanjs/mean)
-[![Coverage Status](https://coveralls.io/repos/meanjs/mean/badge.svg?branch=master&service=github)](https://coveralls.io/github/meanjs/mean?branch=master)
+[![Coverage Status](https://coveralls.io/repos/jmreed0112358/mean/badge.svg?branch=0.4.2-fixes&service=github)](https://coveralls.io/github/jmreed0112358/mean?branch=0.4.2-fixes)
 
 MEAN.JS is a full-stack JavaScript open-source solution, which provides a solid starting point for [MongoDB](http://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](http://angularjs.org/) based applications. The idea is to solve the common issues with connecting those frameworks, build a robust framework to support daily development needs, and help developers use better practices while working with popular JavaScript components.
 
@@ -18,7 +17,7 @@ Before you begin we recommend you read about the basic building blocks that asse
 ## Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
 * Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager. If you encounter any problems, you can also use this [GitHub Gist](https://gist.github.com/isaacs/579814) to install Node.js.
-  * Node v5 IS NOT SUPPORTED AT THIS TIME! 
+* Node v5 IS NOT SUPPORTED AT THIS TIME!
 * MongoDB - [Download & Install MongoDB](http://www.mongodb.org/downloads), and make sure it's running on the default port (27017).
 * Ruby - [Download & Install Ruby](https://www.ruby-lang.org/en/documentation/installation/)
 * Bower - You're going to use the [Bower Package Manager](http://bower.io/) to manage your front-end packages. Make sure you've installed Node.js and npm first, then install bower globally using npm:
@@ -263,26 +262,26 @@ for hosting applications in the cloud.  After you have an account follow the bel
 
 * Install the [Cloud Foundry command line tools](http://docs.cloudfoundry.org/devguide/installcf/install-go-cli.html).
 * Now you need to log into Cloud Foundry from the Cloud Foundry command line.
-  *  If you are using Pivotal Web Services run `$ cf login -a api.run.pivotal.io`.
-  *  If you are using IBM Bluemix run `$ cf login -a api.ng.bluemix.net`.
+	*  If you are using Pivotal Web Services run `$ cf login -a api.run.pivotal.io`.
+	*  If you are using IBM Bluemix run `$ cf login -a api.ng.bluemix.net`.
 * Create a Mongo DB service.
 +  *  If you are using Pivotal Web Services run `$ cf create-service mongolab sandbox mean-mongo`
 +  *  If you are using IBM Bluemix run `$ cf create-service mongodb 100 mean-mongo`
 * Clone the GitHub repo for MEANJS if you have not already done so
-  * `$ git clone https://github.com/meanjs/mean.git && cd mean`
+	* `$ git clone https://github.com/meanjs/mean.git && cd mean`
 * Run `$ npm install`
 * Run the Grunt Build task to build the optimized JavaScript and CSS files
-  * `$ grunt build`
+	* `$ grunt build`
 * Deploy MEANJS to Cloud Foundry
-  * `$ cf push`
+	* `$ cf push`
 
 After `cf push` completes you will see the URL to your running MEANJS application 
 (your URL will be different).
 
-    requested state: started
-    instances: 1/1
-    usage: 128M x 1 instances
-    urls: mean-humbler-frappa.mybluemix.net
+		requested state: started
+		instances: 1/1
+		usage: 128M x 1 instances
+		urls: mean-humbler-frappa.mybluemix.net
 
 Open your browser and go to that URL and your should see your MEANJS app running!
 
